@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity
 
     private static final String TAG = "MainActivity";
 
-    public String wanted = "";
+    public String wanted;
 
-    public String porPartes = "https://www.googleapis.com/books/v1/volumes?q=" + wanted + "&maxResults=15";
 
-    private String GOOGLEBOOKS_REQUEST_URL = porPartes ;
+
+    private String GOOGLEBOOKS_REQUEST_URL;
 
     private static final int BOOKS_LOADER_ID = 1;
 

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">books1</string>
+
+    <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
+    <string name="no_internet_connection">No internet connection.</string>
+
+    <!-- Error message when no books found -->
+    <string name="no_books">NO BOOKS FOUND. Please introduce another only one word to looking for</string>
+</resources>

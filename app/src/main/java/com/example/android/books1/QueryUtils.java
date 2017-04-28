@@ -186,10 +186,5 @@ public final class QueryUtils {
         return booksArrayList;
     }
 
-    public void obtenerAutores() {
-
-
-    }
-
 
 }

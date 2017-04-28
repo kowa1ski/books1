@@ -171,7 +171,7 @@ public final class QueryUtils {
                 // and url from the JSON response.
                 Books book = new Books(authors, title, url);
 
-                // Add the new {@link Books} to the list of earthquakes.
+                // Add the new {@link Books} to the list of books.
                 booksArrayList.add(book);
             }
 
@@ -182,10 +182,8 @@ public final class QueryUtils {
             Log.e("QueryUtils", "Problem parsing the books JSON results", e);
         }
 
-        // Return the list of earthquakes
+        // Return the list of books
         return booksArrayList;
     }
-//comentario de prueba para gist
-    //el anterior no funcionó. - segundo comentario de prueba
 
 }

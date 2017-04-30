@@ -27,6 +27,8 @@ public final class QueryUtils {
     /** Tag for the log messages */
     private static final String LOG_TAG = QueryUtils.class.getSimpleName();
 
+
+
     public static List<Books> fetchBooksData(String requestUrl) {
         // Create URL object
         URL url = createUrl(requestUrl);
@@ -155,9 +157,22 @@ public final class QueryUtils {
                 JSONObject volumeInfo = currentBook.getJSONObject("volumeInfo");
 
                 // Extract the value for the key called "authors"
+                JSONArray authorsArray = volumeInfo.getJSONArray("authors");
+                StringBuilder authorBuilder = new StringBuilder();
                 String authors;
+
                 if (volumeInfo.has("authors")) {
-                    authors = volumeInfo.getString("authors");
+
+                    for (int ii = 0 ; ii < authorsArray.length(); ii++ ) {
+
+                    authorBuilder.append(authorsArray.get(ii));
+
+                    if(ii+1 != authorsArray.length()) {authorBuilder.append(", "); }
+
+                    }
+
+                    authors = authorBuilder.toString();
+
                 } else { authors = "Unknown"; }
 
                 // Extract the value for the key called "title"
